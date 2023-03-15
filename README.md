@@ -106,15 +106,15 @@ Here are some screenshots from my presentation to the sales and leadership teams
 The dashboards provide interactive visualizations of the data using Looker studio. The dashboards include charts and graphs that allow users to explore the data in more detail and gain additional insights. 
 
 - Leadership Dashboard
+
 ![Slide 1](./Leadership%20Presentation/Dashboard.png)
 
 - Sales Dashboard
-![Slide 1](./Sales%20Presentation/Sales Dashboard.png)
+
+![Slide 1](./Sales%20Presentation/Dashboard.png)
 
 ## Conclusion
 
 This project has provided valuable insights into the sales performance of Adventure Works. The analysis has identified opportunities to improve sales and provided recommendations for the sales and leadership teams. The dashboards provide an easy-to-use tool for exploring the data and gaining additional insights. Overall, this project aims to help the sales and leadership teams make informed decisions based on the insights gained from the data.
 
 ---
-
-[Insert any additional information or acknowledgments here.] 
