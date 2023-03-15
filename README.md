@@ -99,7 +99,7 @@ Here are some screenshots from my presentation to the sales and leadership teams
 
 The dashboards provide interactive visualizations of the data using Looker studio. The dashboards include charts and graphs that allow users to explore the data in more detail and gain additional insights. 
 
-<iframe width="800" height="600" src="https://lookerstudio.google.com/embed/reporting/191d9fbb-a24b-4004-a633-b1dbd3ca5a80/page/Rd34" frameborder="0" allowfullscreen></iframe>
+![Slide 1](./Leadership%20Presentation/Dashboard.png)
 
 ## Conclusion
 
