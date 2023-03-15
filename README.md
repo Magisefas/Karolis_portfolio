@@ -79,6 +79,41 @@ JOIN `tc-da-1.adwentureworks_db.contact` AS CON
   ON EMP.ContactID = CON.ContactId
 ORDER BY SQH.QuotaDate
  ```
+ 
+```sql
+
+-- Products sold in each region.
+
+SELECT 
+  DISTINCT SOH.SalesPersonID, 
+  CNT.Firstname,
+  PRD.Name, 
+  COUNT(SOD.ProductID) AS Product_Sold,
+  SPC.CountryRegionCode
+FROM `tc-da-1.adwentureworks_db.salesorderheader` AS SOH
+JOIN `tc-da-1.adwentureworks_db.salesperson` AS SP
+  ON SOH.SalesPersonID = SP.SalesPersonID
+JOIN `tc-da-1.adwentureworks_db.employee` AS EMP
+  ON SP.SalesPersonID = EMP.EmployeeId
+JOIN `tc-da-1.adwentureworks_db.contact` AS CNT
+  ON EMP.ContactID = CNT.ContactId
+JOIN `tc-da-1.adwentureworks_db.salesorderdetail` AS SOD
+  ON SOH.SalesOrderID = SOD.SalesOrderID
+JOIN `tc-da-1.adwentureworks_db.specialofferproduct` AS SOP
+  ON SOD.ProductID = SOP.ProductID
+JOIN `tc-da-1.adwentureworks_db.product` AS PRD
+  ON SOP.ProductID = PRD.ProductID
+JOIN `tc-da-1.adwentureworks_db.customer` AS CUS
+  ON SOH.CustomerID = CUS.CustomerID
+JOIN `tc-da-1.adwentureworks_db.customeraddress` AS CSA
+  ON CUS.CustomerID = CSA.CustomerID
+JOIN `tc-da-1.adwentureworks_db.address` AS ADR
+  ON CSA.AddressID = ADR.AddressID
+JOIN `tc-da-1.adwentureworks_db.stateprovince` AS SPC
+  ON ADR.StateProvinceID = SPC.StateProvinceID
+GROUP BY 1, 2, 3, 5
+ORDER BY CNT.Firstname
+ ```
 
 The analysis focused on understanding the sales performance across different regions, products and sales types. The analysis also looked at trends over time and identified opportunities to improve sales. 
 
