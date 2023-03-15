@@ -86,9 +86,20 @@ The analysis focused on understanding the sales performance across different reg
 
 The presentation summarizes the findings from the data analysis and provides recommendations for the sales and leadership teams. The presentation includes charts and graphs to visually represent the data and communicate the insights. 
 
+Here are some screenshots from my presentation to the sales and leadership teams:
+
+![Slide 1](./Leadership%20Presentation/Screenshot_1.png)
+![Slide 2](./Leadership%20Presentation/Screenshot_2.png)
+![Slide 3](./Leadership%20Presentation/Screenshot_3.png)
+![Slide 4](./Leadership%20Presentation/Screenshot_4.png)
+![Slide 5](./Leadership%20Presentation/Screenshot_5.png)
+![Slide 6](./Leadership%20Presentation/Screenshot_6.png)
+
 ## Dashboards
 
-The dashboards provide interactive visualizations of the data using Tableau. The dashboards include charts and graphs that allow users to explore the data in more detail and gain additional insights. 
+The dashboards provide interactive visualizations of the data using Looker studio. The dashboards include charts and graphs that allow users to explore the data in more detail and gain additional insights. 
+
+<iframe width="800" height="600" src="https://lookerstudio.google.com/embed/reporting/191d9fbb-a24b-4004-a633-b1dbd3ca5a80/page/Rd34" frameborder="0" allowfullscreen></iframe>
 
 ## Conclusion
 
