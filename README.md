@@ -94,12 +94,22 @@ Here are some screenshots from my presentation to the sales and leadership teams
 ![Slide 4](./Leadership%20Presentation/Screenshot_4.png)
 ![Slide 5](./Leadership%20Presentation/Screenshot_5.png)
 ![Slide 6](./Leadership%20Presentation/Screenshot_6.png)
+![Slide 1](./Sales%20Presentation/Screenshot_1.png)
+![Slide 2](./Sales%20Presentation/Screenshot_2.png)
+![Slide 3](./Sales%20Presentation/Screenshot_3.png)
+![Slide 4](./Sales%20Presentation/Screenshot_4.png)
+![Slide 5](./Sales%20Presentation/Screenshot_5.png)
+![Slide 6](./Sales%20Presentation/Screenshot_6.png)
 
 ## Dashboards
 
 The dashboards provide interactive visualizations of the data using Looker studio. The dashboards include charts and graphs that allow users to explore the data in more detail and gain additional insights. 
 
+- Leadership Dashboard
 ![Slide 1](./Leadership%20Presentation/Dashboard.png)
+
+- Sales Dashboard
+![Slide 1](./Sales%20Presentation/Sales Dashboard.png)
 
 ## Conclusion
 
