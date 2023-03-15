@@ -22,11 +22,65 @@ Overall, this project aims to help the sales and leadership teams make informed 
 
 ## Data Sources
 
-The data for this project was sourced from the Adventure Works database. The database contains information about sales, customers, products, and more. The data was accessed using SQL Server Management Studio.
+The data for this project was sourced from the Adventure Works database. The database contains information about sales, customers, products, and more. The data was accessed using Google Bigquery.
 
 ## Data Cleaning and Analysis
 
-The data was cleaned and analyzed using SQL queries in SQL Server Management Studio. The analysis focused on understanding the sales performance across different regions, products, and customer segments. The analysis also looked at trends over time and identified opportunities to improve sales. 
+The data was cleaned and analyzed using SQL queries in Bigquery.
+
+```sql
+
+-- Leadership dashboard query
+SELECT 
+  DATE_TRUNC(OrderDate, MONTH) AS OrderMonth,
+  SalesOrderID,
+  SalesPersonID,
+  SUM(TotalDue) AS Revenue,
+  SUM(TaxAmt + Freight) AS Expenses,
+  SUM(TotalDue - LineTotal) AS Profit
+FROM 
+  `your-project-id.adventureworks.salesorderheader` SOH
+  JOIN (
+    SELECT 
+      SalesOrderID, 
+      SUM(LineTotal) AS LineTotal
+    FROM 
+      `your-project-id.adventureworks.salesorderdetail`
+    GROUP BY 
+      SalesOrderID
+  ) SOD ON SOH.SalesOrderID = SOD.SalesOrderID
+GROUP BY 
+  OrderMonth, SalesOrderID, SalesPersonID
+ORDER BY 
+  OrderMonth
+ ```
+
+```sql
+
+-- Sales dashboard query
+SELECT
+  SP.SalesPersonID,
+  CON.Firstname,
+  SQH.QuotaDate,
+  SQH.SalesQuota AS Generated,
+  SP.SalesQuota AS Need_To_Reach,
+  CASE
+    WHEN SQH.SalesQuota >= SP.SalesQuota THEN 'Reached'
+    ELSE 'Not reached'
+  END AS QuotaStatus
+FROM
+  `tc-da-1.adwentureworks_db.salesperson` AS SP
+JOIN 
+  `tc-da-1.adwentureworks_db.salespersonquotahistory` AS SQH
+  ON SP.SalesPersonID = SQH.SalesPersonID 
+JOIN `tc-da-1.adwentureworks_db.employee` AS EMP
+  ON SP.SalesPersonID = EMP.EmployeeId
+JOIN `tc-da-1.adwentureworks_db.contact` AS CON
+  ON EMP.ContactID = CON.ContactId
+ORDER BY SQH.QuotaDate
+ ```
+
+The analysis focused on understanding the sales performance across different regions, products and sales types. The analysis also looked at trends over time and identified opportunities to improve sales. 
 
 ## Presentation
 
